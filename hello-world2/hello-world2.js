@@ -1,2 +1,2 @@
 
-console.log('Are you still there? I hope so I think');
+console.log('After all tomorrow is another day');
