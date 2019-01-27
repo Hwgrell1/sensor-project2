@@ -1,2 +1,2 @@
 
-console.log('After all tomorrow is another day');
+console.log('I think I finally got it');
