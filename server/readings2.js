@@ -1,16 +1,16 @@
 const express = require('express')
 const app = express() 
-const getSensorReadings = require('./readings')
+const getSensorReadings1 = require('./readings')
 
 
 app.get('/temperature', function (req, res) {
-	getSensorReadings((err, temperature, humidity) => {
+	getSensorReadings1((err, temperature, humidity) => {
 
 	if (!err) { 
 		res.send(temperature.toFixed(1) + '°C') } }) })
 
 app.get('/humidity', function (req, res) {
-	getSensorReadings((err, temperature, humidity) => {
+	getSensorReadings1((err, temperature, humidity) => {
 	if (!err) { 
 		res.send(humidity.toFixed(1) + '%') } }) })
 
