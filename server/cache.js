@@ -5,8 +5,8 @@ Instantiate the cache. In this case its a simple variable
 stored in local memory
 */ 
 
-const cache = temperature: null
-const cache2 = humidity: null
+const cache = temperature
+const cache2 = humidity
 
 
 /*
