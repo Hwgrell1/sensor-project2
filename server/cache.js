@@ -5,8 +5,8 @@ Instantiate the cache. In this case its a simple variable
 stored in local memory
 */ 
 
-const cache = temperature
-const cache2 = humidity
+const cache 
+const cache2 
 
 
 /*
@@ -22,8 +22,8 @@ setInterval(() => { getSensorReadings((err, temperature, humidity) => {
 Set the values of the cache on receiving new readings 
 */ 
 
-cache.temperature = temperature 
-cache2.humidity = humidity }) 
+cache = temperature 
+cache2  = humidity }) 
 }, 2000) 
 
 /*
@@ -32,7 +32,6 @@ values, and don't make a call to the sensor interface
 everytime
 */ 
 
-module.exports.getTemperature = () => cache.temperature 
-module.exports.getHumidity = () => cache2.humidity
-
+module.exports.getTemperature = () => cache
+module.exports.getHumidity = () => cache2
  
