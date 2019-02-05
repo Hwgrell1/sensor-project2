@@ -7,7 +7,7 @@ stored in local memory
 
 const cache = temperature
 const cache2 = humidity
-}
+
 
 /*
 Run a function to get the sensor readings every 2 seconds 
