@@ -1,25 +1,30 @@
-//Import the sensor library 
-   
-	const sensor = require('node-dht-sensor')
+const sensor = require('node-dht-sensor')
 
-//The first argument is the sensor number. In this case
-//	11 represents the DHT11 sensor
+/*
+We abstract away the functionality to read sensor
+information inside the getSensorReadings function.
+This function is also asynchronous. It accepts a callback
+function as an argument.
+*/
 
-//The second argument is the pin number to read from,
-//	for this example, we have connected the signal pin to pin 4
+const getSensorReadings = (callback) => {sensor.read(11, 4, function (err,
+	 temperature,humidity) {
+         if (err) { 
+/* If there is an error, call the callback function with the error 
+as its first argument */           
 
-	sensor.read(11, 4, function(err, temperature, humidity)
-	{
+	return callback(err)}
 
-//After reading the sensor, we get the temperature	
-//	and humidity readings
+ /*
+If everything went well, call the callback with "null" as the first argument 
+to indicate that there was no error.The second and third arguments would
+be the results    (temperature and humidity respectively)
+ */
+         callback(null, temperature, humidity) }) }
 
-	 if (!err) { 
+/*
+Finally, export the function so that it can be used by other parts
+of our code
+*/    
 
-//If there is no error, log the readings to the console
-
-	  console.log('temp: ' + temperature.toFixed(1) + '°C, ' +
-	              'humidity: ' + humidity.toFixed(1) + '%'
-	           ) 
-		   }
-		   });
+	module.exports = getSensorReadings
