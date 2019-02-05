@@ -11,7 +11,7 @@ app.get('/temperature', function (req, res) {
 app.get('/humidity', function (req, res) {
 	getSensorReadings((err, temperature, humidity) => {
 	if (!err) { 
-		res.send(humidity.toFixed(1) + '%') } }) }
+		res.send(humidity.toFixed(1) + '%') } }) })
 
 app.listen(3000, function () { console.log('Server listening on port 3000') 
 	})
