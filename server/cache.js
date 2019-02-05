@@ -5,7 +5,10 @@ Instantiate the cache. In this case its a simple variable
 stored in local memory
 */ 
 
-const cache = temperature, humidity }
+const cache = 
+temperature: null,
+humidity: null
+}
 
 /*
 Run a function to get the sensor readings every 2 seconds 
