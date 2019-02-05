@@ -27,4 +27,4 @@ Finally, export the function so that it can be used by other parts
 of our code
 */    
 
-	module.exports = getSensorReadings
+	module.exports = 'getSensorReadings'
