@@ -5,8 +5,8 @@ Instantiate the cache. In this case its a simple variable
 stored in local memory
 */ 
 
-const cache = null
-const cache2 = null
+var cache = null
+var cache2 = null
 
 
 /*
