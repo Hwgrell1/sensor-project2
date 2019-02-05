@@ -5,9 +5,8 @@ Instantiate the cache. In this case its a simple variable
 stored in local memory
 */ 
 
-const cache = 
-temperature: null,
-humidity: null
+const cache = temperature
+const cache2 = humidity
 }
 
 /*
@@ -24,7 +23,7 @@ Set the values of the cache on receiving new readings
 */ 
 
 cache.temperature = temperature 
-cache.humidity = humidity }) 
+cache2.humidity = humidity }) 
 }, 2000) 
 
 /*
@@ -34,6 +33,6 @@ everytime
 */ 
 
 module.exports.getTemperature = () => cache.temperature 
-module.exports.getHumidity = () => cache.humidity
+module.exports.getHumidity = () => cache2.humidity
 
  
